@@ -1,0 +1,52 @@
+##
+# install amplify into an app
+npm create amplify@latest
+##
+# to run the backend in a sandbox
+npx ampx sandbox                        ## Generates amplify.outputs.json for use in the front end.
+##
+# If you stop the sandbox with Ctrl-C
+# The sandbox is still there
+
+npm run dev # will load the front end
+
+##
+# if making a lot of big backend changes you can stop the sandbox, make the changes
+# and then start it again
+
+##
+# Delete a sandbox
+
+npx ampx <sandbox-name> delete
+
+
+##
+# Install CDK
+
+sudo npm i -g aws-cdk
+
+cdk --version # okay
+
+##
+# Start a new project
+
+## cd to directory where you want the project created
+cdk -init app --language=typescript
+
+##
+# Add resources etc. to your stack -- see cdk-first/first/lib/first-stack.ts for a simple example
+
+##
+# Generate the typescript 
+cdk synth                       ## Generates a cdk.out folder
+
+
+cdk bootstrap                   ## Only done ONE TIME -- works at the account level
+
+##
+# If using amplify, you don't need the CDKToolKit stack -- you can delete it in the console
+
+
+
+
+
